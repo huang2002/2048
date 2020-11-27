@@ -4,7 +4,7 @@ import { $isDead } from './states.js';
 export const Toolbar = X.createElement('div', {
     id: 'toolbar',
     style: {
-        marginBottom: '1em',
+        margin: '1em 0',
         textAlign: 'center',
     },
 },

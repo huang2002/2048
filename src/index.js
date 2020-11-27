@@ -21,6 +21,7 @@ document.body.appendChild(
             X.createElement('h2', {
                 id: 'scores',
                 style: {
+                    color: '#F00',
                     fontSize: '1.8em',
                     fontWeight: 'bold',
                     textAlign: 'center',
