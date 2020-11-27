@@ -13,7 +13,7 @@ export const $board = X.toReactive(
     Array.from({ length: MAX_SLIP_COUNT }, () => 0)
 );
 
-export const $isDead = $board.toValue().map(board => {
+export const $isDead = $board.toValue(board => {
     for (let i = 0; i < MAX_SLIP_COUNT; i++) {
         if (!board[i]) {
             return false;
