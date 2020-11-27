@@ -56,8 +56,10 @@ export const getNextPosition = () => {
 
 export const initGame = () => {
     clearBoard();
-    $board.replace(getNextPosition(), 2);
     $scores.setSync(0);
+    X.setSchedule(() => {
+        $board.replace(getNextPosition(), 2);
+    });
 };
 
 const FOUR_REQUIREMENT = 10;
