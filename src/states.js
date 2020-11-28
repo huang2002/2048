@@ -124,7 +124,7 @@ window.addEventListener('mousedown', event => {
     event.preventDefault();
     x0 = event.clientX;
     y0 = event.clientY;
-});
+}, { passive: false });
 
 window.addEventListener('touchstart', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
@@ -134,7 +134,7 @@ window.addEventListener('touchstart', event => {
     const touch = event.changedTouches[0];
     x0 = touch.clientX;
     y0 = touch.clientY;
-});
+}, { passive: false });
 
 window.addEventListener('mouseup', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
@@ -144,7 +144,7 @@ window.addEventListener('mouseup', event => {
     x1 = event.clientX;
     y1 = event.clientY;
     checkGesture();
-});
+}, { passive: false });
 
 window.addEventListener('touchend', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
@@ -155,4 +155,4 @@ window.addEventListener('touchend', event => {
     x1 = touch.clientX;
     y1 = touch.clientY;
     checkGesture();
-});
+}, { passive: false });
