@@ -121,6 +121,7 @@ window.addEventListener('mousedown', event => {
     if ($menuVisible.current || event.target.tagName === 'BUTTON') {
         return;
     }
+    event.preventDefault();
     x0 = event.clientX;
     y0 = event.clientY;
 });
@@ -129,6 +130,7 @@ window.addEventListener('touchstart', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
         return;
     }
+    event.preventDefault();
     const touch = event.changedTouches[0];
     x0 = touch.clientX;
     y0 = touch.clientY;
@@ -138,6 +140,7 @@ window.addEventListener('mouseup', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
         return;
     }
+    event.preventDefault();
     x1 = event.clientX;
     y1 = event.clientY;
     checkGesture();
@@ -147,6 +150,7 @@ window.addEventListener('touchend', event => {
     if ($menuVisible.current || Toolbar.contains(event.target)) {
         return;
     }
+    event.preventDefault();
     const touch = event.changedTouches[0];
     x1 = touch.clientX;
     y1 = touch.clientY;
